@@ -3,24 +3,8 @@
 Maintainer: @Neel0210
 
 <code>
-• Latest kernel based on 4.14.113
-• ONEUI and GSI build
-• Compiled with latest Clang 13
-• Removed some security
-• Enabled all Native Governers
-• optimized code a bit
-• Fixed Magisk reboot on kernel
-• Added Separate MTP option
-• Default compression as LZ4
-• Enabled NTFS file system
-• Disabled CRC check
-• Added state notifier
-• Fsync ON/OFF support
-• Added boeffla wl blocker
-• Added CD ROM/DVD file system
-• Disabled default kernel debugging
-• Added wireGuard support
-• Enabled Deadline IO SCHED
+• All features which older version had
+• Tried to patch magisk to get you root in system
 </code>
 
 <b>Notes:</b>
