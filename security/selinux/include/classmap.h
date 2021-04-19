@@ -27,10 +27,6 @@
 #define COMMON_CAP2_PERMS  "mac_override", "mac_admin", "syslog", \
 		"wake_alarm", "block_suspend", "audit_read"
 
-#if CAP_LAST_CAP > CAP_AUDIT_READ
-#error New capability defined, please update COMMON_CAP2_PERMS.
-#endif
-
 /*
  * Note: The name for any socket class should be suffixed by "socket",
  *	 and doesn't contain more than one substr of "socket".
@@ -242,7 +238,3 @@ struct security_class_mapping secclass_map[] = {
 	  {"map_create", "map_read", "map_write", "prog_load", "prog_run"} },
 	{ NULL }
   };
-
-#if PF_MAX > 44
-#error New address family defined, please update secclass_map.
-#endif
