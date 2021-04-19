@@ -51,7 +51,7 @@ echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
 make m30sdd_defconfig O=out
-make -j'nproc' O=out
+make -j4 O=out
 echo "Kernel Compiled"
 echo ""
 echo "======================="
