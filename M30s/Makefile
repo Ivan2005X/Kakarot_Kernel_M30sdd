@@ -312,7 +312,7 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/x86/ -e s/x86_64/x86/ \
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		?=arm64
-CROSS_COMPILE	?=../PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+#CROSS_COMPILE	?=../PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
 SRCARCH 	:= $(ARCH)
@@ -374,7 +374,7 @@ AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
 LDGOLD		= $(CROSS_COMPILE)ld.gold
 #CC		= $(CROSS_COMPILE)gcc
-CC		= $(srctree)/prebuilts/clang/host/linux-x86/clang-4639204/bin/clang
+#CC		= $(srctree)/prebuilts/clang/host/linux-x86/clang-4639204/bin/clang
 
 CPP		= $(CC) -E
 AR		= $(CROSS_COMPILE)ar
@@ -508,7 +508,7 @@ endif
 
 ifeq ($(cc-name),clang)
 ifneq ($(CROSS_COMPILE),)
-CLANG_TRIPLE=$(srctree)/prebuilts/clang/host/linux-x86/clang-4639204/bin/aarch64-linux-gnu-
+#CLANG_TRIPLE=$(srctree)/prebuilts/clang/host/linux-x86/clang-4639204/bin/aarch64-linux-gnu-
 CLANG_TARGET	:= --target=$(notdir $(CLANG_TRIPLE:%-=%))
 GCC_TOOLCHAIN	:= $(realpath $(dir $(shell which $(LD)))/..)
 $(info GCC_TOOLCHAIN - $(GCC_TOOLCHAIN))
