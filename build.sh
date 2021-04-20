@@ -35,17 +35,17 @@ fi
 echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
-make clean && make mrproper
-rm ./arch/arm64/boot/Image
-rm ./arch/arm64/boot/Image.gz
-rm ./Image
-rm ./output/*.zip
-rm ./PRISH/AIK/image-new.img
-rm ./PRISH/AIK/ramdisk-new.cpio.empty
-rm ./PRISH/AIK/split_img/boot.img-zImage
-rm ./PRISH/AK/Image
-rm ./PRISH/ZIP/PRISH/D/M30S/boot.img
-rm ./PRISH/AK/*.zip
+#make clean && make mrproper
+#rm ./arch/arm64/boot/Image
+#rm ./arch/arm64/boot/Image.gz
+#rm ./Image
+#rm ./output/*.zip
+#rm ./PRISH/AIK/image-new.img
+#rm ./PRISH/AIK/ramdisk-new.cpio.empty
+#rm ./PRISH/AIK/split_img/boot.img-zImage
+#rm ./PRISH/AK/Image
+#rm ./PRISH/ZIP/PRISH/D/M30S/boot.img
+#rm ./PRISH/AK/*.zip
 clear
 echo "======================="
 echo "Making kernel with ZIP"
