@@ -36,6 +36,7 @@ echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
 make clean && make mrproper
+rm -rf out
 rm ./arch/arm64/boot/Image
 rm ./arch/arm64/boot/Image.gz
 rm ./Image
@@ -58,8 +59,8 @@ echo "======================="
 echo "Packing Kernel INTO ZIP"
 echo "======================="
 echo ""
-cp -r ./arch/arm64/boot/Image ./PRISH/AIK/split_img/boot.img-zImage
-cp -r ./arch/arm64/boot/Image ./PRISH/AK/Image
+cp -r ./out/arch/arm64/boot/Image ./PRISH/AIK/split_img/boot.img-zImage
+cp -r ./out/arch/arm64/boot/Image ./PRISH/AK/Image
 ./PRISH/AIK/repackimg.sh
 cp -r ./PRISH/AIK/image-new.img ./PRISH/ZIP/PRISH/D/M30S/boot.img
 cd PRISH/ZIP
