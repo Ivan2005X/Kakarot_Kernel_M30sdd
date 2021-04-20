@@ -29,7 +29,7 @@ if [ ! -d "$(pwd)/gcc/" ]; then
 fi
 
 if [ ! -d "$(pwd)/clang/" ]; then
-   git clone --depth 1 https://github.com/PrishKernel/toolchains.git -b proton-clang12 clang
+   git clone --depth 1 https://github.com/kdrag0n/proton-clang.git -b clang
 fi
 
 echo "======================="
@@ -50,8 +50,8 @@ clear
 echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
-make m30sdd_defconfig O=out
-make -j16 O=out
+make m30sdd_defconfig O=out CC=clang
+make -j16 O=out CC=clang
 echo "Kernel Compiled"
 echo ""
 echo "======================="
