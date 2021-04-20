@@ -29,7 +29,7 @@ if [ ! -d "$(pwd)/gcc/" ]; then
 fi
 
 if [ ! -d "$(pwd)/clang/" ]; then
-   git clone --depth 1 https://github.com/kdrag0n/proton-clang.git -b clang
+   git clone --depth 1 https://github.com/kdrag0n/proton-clang.git clang
 fi
 
 echo "======================="
