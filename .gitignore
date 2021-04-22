@@ -4,3 +4,4 @@ clang/
 *.fw
 *.zip
 out/
+output/
