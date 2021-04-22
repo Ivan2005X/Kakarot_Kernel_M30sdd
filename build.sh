@@ -69,4 +69,3 @@ echo "Packing into Flashable zip"
 echo "==========================="
 ./zip.sh
 cd ../..
-cp -r ./PRISH/ZIP/1.zip ./output/Kakarot_Kernel-Enforcing-N1-M30sdd.zip
