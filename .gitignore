@@ -5,3 +5,4 @@ clang/
 *.zip
 out/
 output/
+PRISH/
