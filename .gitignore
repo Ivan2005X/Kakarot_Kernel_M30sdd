@@ -7,3 +7,4 @@ out/
 output/
 PRISH/
 test.sh
+*.log
