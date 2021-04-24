@@ -6,3 +6,4 @@ clang/
 out/
 output/
 PRISH/
+test.sh
