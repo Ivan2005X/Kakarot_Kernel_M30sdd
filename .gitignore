@@ -5,6 +5,5 @@ clang/
 *.zip
 out/
 output/
-PRISH/
 test.sh
 *.log
