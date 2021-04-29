@@ -16,7 +16,7 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }} 
       run: |-
-          curl -F text="Started Compiling for M30s" "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=Markdown"
+          curl -F text="Started Compiling Recovery M30s" "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&parse_mode=Markdown"
     - name: Prepare
       run: |
           sudo apt-get update
@@ -28,7 +28,6 @@ jobs:
           build-essential kernel-package libncurses5-dev \
           bzip2 git python expect \
           gcc-aarch64-linux-gnu g++-aarch64-linux-gnu -y
-          curl https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/android_build_env.sh | bash
       # Clone source
     - name: Clone source
       run: |
@@ -42,14 +41,5 @@ jobs:
             -d '{"chat_id": "$CHAT_ID", "text": "Starting compilation", "disable_notification": true}' \
            https://api.telegram.org/bot$BOT_TOKEN/sendMessage
           cd ~/kernel
-          bash make.sh
+          bash twrp.sh
       # Upload    
-    - name: Upload
-      env:
-          CHAT_ID: ${{ secrets.CHAT_ID }}
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }} 
-      run: |
-          cd ~/kernel/output
-          for i in *.zip; do
-          curl -F chat_id=$CHAT_ID -F document=@$i -F parse_mode=markdown caption="PrishKernel M31" https://api.telegram.org/bot$BOT_TOKEN/sendDocument
-          done
