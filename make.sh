@@ -64,8 +64,18 @@ cp -r ./out/arch/arm64/boot/Image ./PRISH/AK/Image
 ./PRISH/AIK/repackimg.sh
 cp -r ./PRISH/AIK/image-new.img ./PRISH/ZIP/PRISH/D/M30S/boot.img
 cd PRISH/ZIP
-echo "==========================="
-echo "Packing into Flashable zip"
-echo "==========================="
+echo "=========================="
+echo "Packing and uploading zip"
+echo "=========================="
 ./zip.sh
 cd ../..
+if [ ! True ]; then
+set -o pipefail
+fi
+
+changelog=`cat PRISH/changelog.txt`
+for i in output/*.zip
+do
+curl -F "document=@$i" --form-string "caption=$changelog" "https://api.telegram.org/bot${BOT_ID}/sendDocument?chat_id=${CHAT_ID}&parse_mode=HTML"
+done
+echo "==========================="
