@@ -7,3 +7,5 @@ out/
 output/
 test.sh
 *.log
+PRISH/AIK/ramdisk-new.cpio.empty
+up.sh
