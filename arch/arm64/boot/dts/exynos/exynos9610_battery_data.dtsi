@@ -299,8 +299,8 @@
 		 *  33	CABLE_MAX,
 		 */
 			cable-info {
-				default_input_current = <1800>;
-				default_charging_current = <2100>;
+				default_input_current = <2100>;
+				default_charging_current = <2000>;
 				full_check_current_1st = <300>;
 				full_check_current_2nd = <100>;
 
