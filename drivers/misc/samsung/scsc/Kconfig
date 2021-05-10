@@ -155,7 +155,7 @@ config SCSC_WIFILOGGER_TEST
 	default n
 
 config SCSC_LOG_COLLECTION
-	bool "Samsung SCSC Log Collection"
+	tristate "Samsung SCSC Log Collection"
 	depends on SCSC_CORE
 	default y
 	---help---
