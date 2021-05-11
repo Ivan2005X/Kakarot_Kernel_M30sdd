@@ -19,9 +19,9 @@ ccache -M 50G
 export CCACHE_COMPRESS=1
 
 # TC LOCAL PATH
-export CROSS_COMPILE=gcc/bin/aarch64-linux-android-
-export CLANG_TRIPLE=clang/bin/aarch64-linux-gnu-
-export CC=clang/bin/clang
+export CROSS_COMPILE=$(pwd)/gcc/bin/aarch64-linux-android-
+export CLANG_TRIPLE=$(pwd)/clang/bin/aarch64-linux-gnu-
+export CC=$(pwd)/clang/bin/clang
 
 # Check if have gcc/32 & clang folder
 if [ ! -d gcc ]; then
@@ -78,4 +78,3 @@ for i in output/*.zip
 do
 curl -F "document=@$i" --form-string "caption=$changelog" "https://api.telegram.org/bot${BOT_ID}/sendDocument?chat_id=${CHAT_ID}&parse_mode=HTML"
 done
-echo "==========================="
