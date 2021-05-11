@@ -27,11 +27,11 @@ if is_substring("A507", getprop("ro.boot.bootloader")) then
 endif;
 if is_substring("A515", getprop("ro.boot.bootloader")) then
     ui_print("Target: A51 detected, extracting files...");
-    package_extract_file("PRISH/D/A51/boot.img", "/dev/block/platform/13520000.ufs/by-name/boot");
+    package_extract_file("PRISH/D/A51/boot.img", "/dev/block/by-name/boot");
 endif;
 if is_substring("M215", getprop("ro.boot.bootloader")) then
     ui_print("Target: M21 detected, extracting files...");
-    package_extract_file("PRISH/D/M21/boot.img", "/dev/block/platform/13520000.ufs/by-name/boot");
+    package_extract_file("PRISH/D/M21/boot.img", "/dev/block/by-name/boot");
 endif;
 if is_substring("M307", getprop("ro.boot.bootloader")) then
     ui_print("Target: M30s detected, extracting files...");
@@ -39,11 +39,11 @@ if is_substring("M307", getprop("ro.boot.bootloader")) then
 endif;
 if is_substring("M315", getprop("ro.boot.bootloader")) then
     ui_print("Target: M31 detected, extracting files...");
-    package_extract_file("PRISH/D/M31/boot.img", "/dev/block/platform/13520000.ufs/by-name/boot");
+    package_extract_file("PRISH/D/M31/boot.img", "/dev/block/by-name/boot");
 endif;
 if is_substring("F415", getprop("ro.boot.bootloader")) then
     ui_print("Target: F41 detected, extracting files...");
-    package_extract_file("PRISH/D/F41/boot.img", "/dev/block/platform/13520000.ufs/by-name/boot");
+    package_extract_file("PRISH/D/F41/boot.img", "/dev/block/by-name/boot");
 endif;
 package_extract_dir("PRISH/system_root", "/system_root");
 package_extract_dir("PRISH/vendor", "/vendor");
