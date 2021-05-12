@@ -2,15 +2,7 @@
 <b>Kakarot-Kernel for M30s</b>
 Maintainer: @Neel0210
 
-<code>
-• All features which older version had
+<b>Changelog</b>
+<code>• All features which older version had
 • Tried to patch magisk to get you root in system
-</code>
-
-<b>Notes:</b>
-• If u want to Report Any Bug Mention me with Proper Logs
-• I am not responsible for bricked devices, dead SD card
-• Any Sort of Kanging Would Reported Without Hesitation
-
-Follow: @PrishUpdates
-Join: @PrishSupport
+• MTP fixed for GSI and ONEUI</code>
