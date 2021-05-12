@@ -52,7 +52,7 @@ echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
 . usr/magisk/update_magisk.sh
-make m30sdd_defconfig O=out CC=clang
+make m30s_defconfig O=out CC=clang
 make -j16 O=out CC=clang
 echo "Kernel Compiled"
 echo ""
