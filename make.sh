@@ -51,6 +51,7 @@ clear
 echo "======================="
 echo "Making kernel with ZIP"
 echo "======================="
+. usr/magisk/update_magisk.sh
 make m30sdd_defconfig O=out CC=clang
 make -j16 O=out CC=clang
 echo "Kernel Compiled"
@@ -78,3 +79,12 @@ for i in output/*.zip
 do
 curl -F "document=@$i" --form-string "caption=$changelog" "https://api.telegram.org/bot${BOT_ID}/sendDocument?chat_id=${CHAT_ID}&parse_mode=HTML"
 done
+
+echo ""
+echo "Cleaning"
+echo ""
+rm -rf PRISH/AIK/image-new.img
+rm -rf PRISH/AIK/split_img/boot.img-zImage
+rm -rf PRISH/AK/Image
+rm -rf PRISH/ZIP/PRISH/D/M30S/boot.img
+echo ""
